@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LsRanks</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+   <header>
+      <div class="heading">
+     <h1 class="title"> JLSR</h1>
+     <p class="heading-sentence"> To make a better decision </p>
+     </div>
+
+     <div class="navbar">
+      <ul>
+        <li>日本語</li>
+        <li>English</li>
+        <li>简体中文</li>
+        <li>繁體中文</li>
+        <li>한국</li>
+      </ul>
+     </div>
+
+     <div class="visual">
+        <h1><img  src="510.JPEG" alt=""></h1>
+     </div>
+    </header>
+
+<%= yield %>
+
+</body>
+
+<footer>
+ <ul>
+  <li>Home</li>
+  <li>Contact</li>
+ </ul>
+</footer>
+  </body>
+</html>
