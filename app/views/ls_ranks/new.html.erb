@@ -1,11 +1,14 @@
 <div class="contents row">
-  <%= form_tag('/tweets', method: :post) do %>
+  <%= form_tag('/ls_ranks', method: :post) do %>
     <h3>
       投稿する
     </h3>
     <input placeholder="Nickname" type="text" name="name">
-    <input placeholder="Image Url" type="text" name="image">
-    <textarea cols="30" name="text" placeholder="text" rows="10"></textarea>
+    <!-- <input placeholder="日本語学校の名前" type="text" name="ls_name"> -->
+    <%= select :school_info, :name, @school_infos.map{|t| [t.name, t.id]} %>
+    <!-- <input placeholder="Image Url" type="text" name="image"> -->
+    <input type="file", name="image", multiple=true>
+    <textarea cols="30" name="comments" placeholder="text" rows="10"></textarea>
     <input type="submit" value="SENT">
   <% end %>
 </div>

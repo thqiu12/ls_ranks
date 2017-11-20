@@ -1,30 +1,32 @@
 
-<content>
-<div class="contents clearfix">
+
+<div class="contents">
+        <%= image_tag '510.JPEG', :size =>'800x500', class:'visual'%>
 
   <div class="rank">
    <h3>日本語学校総合評価ランキング</h3>
-   <p class="otherranks"> <a href="">ランキングの続きを見る</a>
+   <p class="otherranks"> <a href="ls_ranks/show">ランキングの続きを見る</a>
    </p>
    <p>その他ランキング<p>
 
   </div>
   <div class="searchbar">
-   <h3>名前で検索</h3>
+   <h3>名前で探す</h3>
    <form>
-    <input type="text" placeholder="日本語学校の名前を入力してください"><br>
+    <input type="text" placeholder="日本語学校の名前を入力してください" size="300" line-height="40px"><br>
     <input type="submit" value="検索">
    </form>
   </div>
 
-  <div class="map">
-   <h3>地図で検索する</h3>
-   <p><img  class="mapimg" src="図1.png" alt=""></p>
-  </div>
+
+   <h3>地図で探す</h3>
+   <%= image_tag '図1.png', :size =>'800x500', class:'map'%>
+
 
   <div class="column">
    <h3>留学コラム</h3>
   </div>
 </div>
-</content>
+
+
 

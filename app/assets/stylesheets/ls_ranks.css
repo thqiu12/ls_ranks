@@ -1,0 +1,93 @@
+body {
+  background-color: #f0f0f0;
+  font-size: 14px;
+  color: #333;
+  margin: 0 auto;
+}
+h1,h2,h3,h4,h5,h6,p {
+  padding: 10px 0;
+  margin: 0;
+}
+
+
+
+.heading {
+  display: inline-block;
+ width: 100%;
+}
+.head_main{
+  display: inline;
+  float: left;
+  padding: 0 300px 0 0;
+}
+.head_main a{
+  /*float:left;*/
+  display: inline;
+  font-size: 32px;
+}
+.langbar {
+  float: left;
+  width: 400px;
+  display: inline;
+  padding: 0 0 0 200px;
+}
+
+.langbar ul {
+    list-style: none;
+    /*float: left;*/
+    width: 500px;
+    padding: 0 0 0 60px;
+    display: inline-block;
+
+}
+
+.langbar ul li {
+  /*float: left;*/
+  display: inline-block;
+  padding:0 15px;
+}
+
+.visual{
+  display: block;
+  margin:auto;
+}
+
+.rank {
+
+
+}
+
+.otherranks {
+ float: right;
+}
+
+.searchbar {
+
+
+}
+
+.map {
+  display: block;
+  margin:auto;
+
+
+}
+
+
+.column {
+
+}
+
+footer ul{
+  list-style: none;
+}
+
+footer ul li{
+  float:left;
+   padding:20px 15px;
+}
+
+
+
+
+

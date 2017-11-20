@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>LsRanks</title>
+  <title>日ナビ:口コミ・ランキングで比較</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
    <header>
       <div class="heading">
-     <h1 class="title"> JLSR</h1>
-     <p class="heading-sentence"> To make a better decision </p>
-     </div>
-
-     <div class="navbar">
+     <p class="head_main"> <%= link_to '日ナビ',root_path %> </p>
+     <div class="langbar">
       <ul>
         <li>日本語</li>
         <li>English</li>
@@ -23,10 +21,23 @@
       </ul>
      </div>
 
-     <div class="visual">
-        <h1><img  src="510.JPEG" alt=""></h1>
+
      </div>
-    </header>
+<p class="heading-sentence">日本語学校の口コミ比較</p>
+
+    <% if user_signed_in? %>
+     <div class="user_nav grid-6">
+     <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+          <a class="post" href="/ls_ranks/new">投稿する</a>
+        </div>
+    <% else %>
+    <div class="grid-6">
+          <%= link_to "ログイン", new_user_session_path, class: 'post' %>
+          <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
+    </div>
+    <% end %>
+
+</header>
 
 <%= yield %>
 
