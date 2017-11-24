@@ -1,19 +1,25 @@
 
 
 <div class="contents">
-        <%= image_tag '510.JPEG', :size =>'800x500', class:'visual'%>
+        <%= image_tag 'cached.jpg', :size => "900x500", class:'visual'%>
+
+  <!-- <div class="prefer">
+    <h3>人気な日本語学校</h3>
+  </div> -->
 
   <div class="rank">
    <h3>日本語学校総合評価ランキング</h3>
-   <p class="otherranks"> <a href="ls_ranks/show">ランキングの続きを見る</a>
+   <p class="nextranks"> <a href="ls_ranks/show">ランキングの続きを見る</a>
    </p>
-   <p>その他ランキング<p>
 
+@all_reviews
+   <p class="otherranks"> その他ランキング<p>
   </div>
+
   <div class="searchbar">
    <h3>名前で探す</h3>
    <form>
-    <input type="text" placeholder="日本語学校の名前を入力してください" size="300" line-height="40px"><br>
+    <input type="text" placeholder="日本語学校の名前を入力してください" size="30" line-height="40px">
     <input type="submit" value="検索">
    </form>
   </div>

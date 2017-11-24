@@ -9,22 +9,9 @@
 
 <body>
    <header>
-      <div class="heading">
-     <p class="head_main"> <%= link_to '日ナビ',root_path %> </p>
-     <div class="langbar">
-      <ul>
-        <li>日本語</li>
-        <li>English</li>
-        <li>简体中文</li>
-        <li>繁體中文</li>
-        <li>한국</li>
-      </ul>
-     </div>
 
-
-     </div>
-<p class="heading-sentence">日本語学校の口コミ比較</p>
-
+    <div class="navbar">
+      「留学経験者による日本語学校評価」
     <% if user_signed_in? %>
      <div class="user_nav grid-6">
      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
@@ -33,9 +20,29 @@
     <% else %>
     <div class="grid-6">
           <%= link_to "ログイン", new_user_session_path, class: 'post' %>
-          <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
+          <%= link_to "ユーザー登録(無料)", new_user_registration_path, class: 'post' %>
     </div>
+
     <% end %>
+    </div>
+
+    <div class="heading">
+     <div class="head_main clearfix">
+      <%= link_to '日ナビ',root_path %>
+       <div class="langbar">
+          <ul>
+            <li>日本語</li>
+            <li>English</li>
+            <li>简体中文</li>
+            <li>繁體中文</li>
+            <li>한국</li>
+          </ul>
+       </div>
+    </div>
+
+     <div class="heading-sentence">日本語学校の口コミ比較</div>
+    </div>
+
 
 </header>
 
@@ -43,11 +50,24 @@
 
 </body>
 
-<footer>
- <ul>
-  <li>Home</li>
+<footer >
+ <ul class="main_footer">
+  <li><%= link_to 'Home',root_path %></li>
   <li>Contact</li>
+  <li>日ナビとは</li>
+  <li>ご利用案内</li>
+  <li>運営会社</li>
+  <li>利用規約</li>
+  <li>個人情報取扱条約</li>
+  <li>広告</li>
+  <li>お問合せ</li>
+  <li>サイトマップ</li>
  </ul>
+
+ <p class="sub_footer clearfix">Copyright © 2017 日ナビ inc. All rights reserved.</p>
+
 </footer>
+
+
   </body>
 </html>

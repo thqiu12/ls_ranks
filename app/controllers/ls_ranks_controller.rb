@@ -3,6 +3,7 @@ class LsRanksController < ApplicationController
   # before_action :move_to_index, only:
 
   def index
+
   end
 
   def show

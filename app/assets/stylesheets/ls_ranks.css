@@ -9,43 +9,61 @@ h1,h2,h3,h4,h5,h6,p {
   margin: 0;
 }
 
+.navbar{
+  display: inline-block;
+  width:100%;
+}
 
+.grid-6{
+  display: inline-block;
+  float: right;
+}
+.grid-6 a{
+  text-decoration: none;
+}
 
 .heading {
-  display: inline-block;
+ display: inline-block;
  width: 100%;
+ background-color: #1e508c;
 }
-.head_main{
-  display: inline;
-  float: left;
-  padding: 0 300px 0 0;
-}
+
+
 .head_main a{
-  /*float:left;*/
+  float:left;
   display: inline;
   font-size: 32px;
+  color:white;
+  text-decoration: none;
 }
+
 .langbar {
-  float: left;
-  width: 400px;
-  display: inline;
-  padding: 0 0 0 200px;
+
+  display: inline-block;
+  float:right;
+
 }
 
 .langbar ul {
     list-style: none;
-    /*float: left;*/
     width: 500px;
-    padding: 0 0 0 60px;
+    padding: 0 0 0 40px;
     display: inline-block;
-
 }
 
 .langbar ul li {
   /*float: left;*/
   display: inline-block;
   padding:0 15px;
+  color:white;
 }
+
+.heading-sentence {
+  background-color: #1e508c;
+  color:white;
+  width:300px;
+}
+
 
 .visual{
   display: block;
@@ -53,24 +71,25 @@ h1,h2,h3,h4,h5,h6,p {
 }
 
 .rank {
-
-
+  background-color: white;
 }
 
-.otherranks {
+.nextranks {
  float: right;
 }
 
-.searchbar {
-
-
+.searchbar h3 {
+  width:100px;
 }
+
+.searchbar {
+background-color: white;
+}
+
 
 .map {
   display: block;
   margin:auto;
-
-
 }
 
 
@@ -78,13 +97,32 @@ h1,h2,h3,h4,h5,h6,p {
 
 }
 
-footer ul{
+
+
+.main_footer {
+  width:100%;
+  float:left;
   list-style: none;
+  color: #0079b2;
 }
 
-footer ul li{
+.main_footer li{
   float:left;
-   padding:20px 15px;
+  padding:20px 20px;
+
+}
+
+.sub_footer {
+   border-top: 1px solid #e3e3e3;
+   text-align: center;
+   padding: 20px 0;
+   font-size: 12px;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
 }
 
 
