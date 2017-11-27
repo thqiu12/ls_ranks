@@ -1,5 +1,5 @@
 body {
-  background-color: #f0f0f0;
+  background-color: white;
   font-size: 14px;
   color: #333;
   margin: 0 auto;
@@ -41,7 +41,6 @@ h1,h2,h3,h4,h5,h6,p {
 
   display: inline-block;
   float:right;
-
 }
 
 .langbar ul {
@@ -65,27 +64,44 @@ h1,h2,h3,h4,h5,h6,p {
 }
 
 
-.visual{
-  display: block;
-  margin:auto;
-}
-
 .rank {
-  background-color: white;
+  font-size: 25px;
 }
 
 .nextranks {
  float: right;
 }
 
-.searchbar h3 {
-  width:100px;
+.bar_sentence {
+  color:white;
+  text-align: center;
+  font-size: 30px;
 }
 
 .searchbar {
 background-color: white;
+background:url(cached.jpg) center top no-repeat;
+background-size: cover;
+width:100%;
+height:600px;
+text-align: center;
+position: relative;
+box-sizing: border-box;
+margin: 0 0 25px;
+padding: 250px 0 0 0;
+min-width: 1000px;
 }
 
+.searchbar .text{
+  width:300px;
+  height:30px;
+  box-sizing: border-box
+}
+
+.searchbar .submit{
+  display: inline-block;
+  width:40px;
+}
 
 .map {
   display: block;
@@ -109,7 +125,7 @@ background-color: white;
 .main_footer li{
   float:left;
   padding:20px 20px;
-
+  text-decoration: none;
 }
 
 .sub_footer {
@@ -123,6 +139,11 @@ background-color: white;
   content: "";
   clear: both;
   display: block;
+}
+
+
+.contents_row{
+text-align: center;
 }
 
 

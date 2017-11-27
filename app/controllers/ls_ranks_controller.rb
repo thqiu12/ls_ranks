@@ -3,7 +3,9 @@ class LsRanksController < ApplicationController
   # before_action :move_to_index, only:
 
   def index
+    @total = Score.order("total DESC")
 
+        # @tweets = Tweet.includes(:user).page(params[:page]).per(5).order("created_at DESC")
   end
 
   def show
@@ -15,6 +17,9 @@ class LsRanksController < ApplicationController
 
   def create
     Comment.create(comment_params)
+  end
+
+  def find
   end
 
   private
