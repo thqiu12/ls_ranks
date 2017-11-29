@@ -4,7 +4,15 @@
       投稿する
     </h3>
     <input placeholder="Nickname" type="text" name="name"><br>
-    <%= select :school_info, :name, @school_infos.map{|t| [t.name, t.id]} %><br>
+    <%= select :school_info, :id, @school_infos.map{|t| [t.name, t.id]} %><br>
+    <%= fields_for @score do |c| %>
+      <%= c.number_field :equipment, placeholder: "Equipment", max: 10, min: 1%>
+      <%= c.number_field :location, placeholder: "Location", max: 10, min: 1%>
+      <%= c.number_field :curriculum, placeholder: "curriculum", max: 10, min: 1%>
+      <%= c.number_field :othersupport, placeholder: "othersupport", max: 10, min: 1%>
+      <%= c.number_field :atmosphere, placeholder: "atmosphere", max: 10, min: 1%>
+    <% end %>
+
 
     <input type="file", name="image", multiple=true><br>
     <textarea cols="30" name="comments" placeholder="text" rows="10"></textarea><br>

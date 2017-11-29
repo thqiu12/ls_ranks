@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171120085805) do
+ActiveRecord::Schema.define(version: 20171127095017) do
 
   create_table "comments", force: :cascade do |t|
     t.text     "comments",   limit: 65535
@@ -35,14 +35,15 @@ ActiveRecord::Schema.define(version: 20171120085805) do
   end
 
   create_table "scores", force: :cascade do |t|
-    t.integer  "total",        limit: 4
-    t.integer  "location",     limit: 4
-    t.integer  "equipment",    limit: 4
-    t.integer  "curriculum",   limit: 4
-    t.integer  "othersupport", limit: 4
-    t.integer  "atmosphere",   limit: 4
+    t.integer  "total",          limit: 4
+    t.integer  "location",       limit: 4
+    t.integer  "equipment",      limit: 4
+    t.integer  "curriculum",     limit: 4
+    t.integer  "othersupport",   limit: 4
+    t.integer  "atmosphere",     limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "school_info_id", limit: 4
   end
 
   create_table "users", force: :cascade do |t|

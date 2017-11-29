@@ -88,7 +88,7 @@ text-align: center;
 position: relative;
 box-sizing: border-box;
 margin: 0 0 25px;
-padding: 250px 0 0 0;
+padding: 150px 0 0 0;
 min-width: 1000px;
 }
 
@@ -98,15 +98,27 @@ min-width: 1000px;
   box-sizing: border-box
 }
 
-.searchbar .submit{
-  display: inline-block;
-  width:40px;
+.submit input{
+/*  width:40px;
+  height: 100px;*/
+  padding: 10px;
+}
+.searchbar input{
+  margin: 50px 0 0 0;
+    width:40px;
+  height: 100px;
+}
+
+.searchbar a {
+  color:white;
+  text-decoration: none;
 }
 
 .map {
   display: block;
   margin:auto;
 }
+
 
 
 .column {
@@ -145,6 +157,10 @@ min-width: 1000px;
 .contents_row{
 text-align: center;
 }
+
+
+
+
 
 
 

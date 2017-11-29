@@ -5,6 +5,7 @@ Rails.application.routes.draw do
    get 'ls_ranks/new'  => 'ls_ranks#new'
    get 'ls_ranks/show' => 'ls_ranks#show'
    post 'ls_ranks'     => 'ls_ranks#create'
+   get  'ls_ranks/show_all' => 'ls_ranks#show_all'
 end
 
 
