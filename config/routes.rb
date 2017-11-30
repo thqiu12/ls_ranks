@@ -6,6 +6,8 @@ Rails.application.routes.draw do
    get 'ls_ranks/show' => 'ls_ranks#show'
    post 'ls_ranks'     => 'ls_ranks#create'
    get  'ls_ranks/show_all' => 'ls_ranks#show_all'
+   get  'users/:id'    => 'users#show'
+   get  'school_info/' => 'school_info#show'
 end
 
 

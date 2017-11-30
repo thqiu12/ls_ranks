@@ -29,7 +29,7 @@ class LsRanksController < ApplicationController
   end
 
   def search
-  # @search =
+
   end
 
   def show_all
@@ -37,14 +37,14 @@ class LsRanksController < ApplicationController
   end
 
 
-
   private
   def comment_params
     params.permit(:name, :image, :comments, :ls_name)
+    # params.require(:school_info).permit(school_id: params[:school_info][:id])
+    # params.require(:user).permit(user_id: params[:user][:id])
   end
 
   def score_params
-    binding.pry
     @total = (params[:score][:location].to_i + params[:score][:equipment].to_i + params[:score][:curriculum].to_i + params[:score][:othersupport].to_i + params[:score][:atmosphere].to_i)/5.0
     params.require(:score).permit(:location, :equipment, :curriculum, :othersupport, :atmosphere).merge(total: @total, school_info_id: params[:school_info][:id])
   end

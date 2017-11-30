@@ -50,4 +50,5 @@ end
   gem 'sprockets', '2.11.0'
   gem 'devise'
   gem 'carrierwave'
+  gem 'kaminari'
 
