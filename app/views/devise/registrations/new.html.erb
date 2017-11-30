@@ -21,6 +21,11 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
+  <div class="field">
+    <%= f.label :ニックネーム %><br/>
+    <%= f.nickname_field :nickname%>
+  </div>
+
   <div class="actions">
     <%= f.submit "新規登録" %>
   </div>

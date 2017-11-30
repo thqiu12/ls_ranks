@@ -29,7 +29,7 @@ class LsRanksController < ApplicationController
   end
 
   def search
-
+    @school_info = SchoolInfo.where(activated: true).paginate(page: params[:page]).search(params[:search])
   end
 
   def show_all

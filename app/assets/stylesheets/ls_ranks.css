@@ -114,6 +114,13 @@ min-width: 1000px;
   text-decoration: none;
 }
 
+.toprankitem {
+  float:left;
+  list-style: none;
+  background-color: red;
+  display:inline-block;
+}
+
 .map {
   display: block;
   margin:auto;
@@ -156,6 +163,11 @@ min-width: 1000px;
 
 .contents_row{
 text-align: center;
+}
+
+.success{
+  text-align: center;
+  padding:50px 0 50px 0;
 }
 
 
