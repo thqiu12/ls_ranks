@@ -26,9 +26,9 @@
           <% sum = sum + score.total.to_i %>
         <% end %>
 
-        <% if sum != nil %>
+        <% if scores.size != nil || scores.size != 0 %>
           平均トータルスコア
-          <%= sum / scores.size if scores.size != 0 %>
+          <%= sum / scores.size %>
         <% else %>
           まだ平均トータルスコアはありません
         <% end %>
