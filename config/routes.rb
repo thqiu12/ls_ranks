@@ -1,13 +1,25 @@
 Rails.application.routes.draw do
   devise_for :users
    root 'ls_ranks#index'
-   get 'ls_ranks' => 'ls_ranks#index'
-   get 'ls_ranks/new'  => 'ls_ranks#new'
-   get 'ls_ranks/show' => 'ls_ranks#show'
-   post 'ls_ranks'     => 'ls_ranks#create'
-   get  'ls_ranks/show_all' => 'ls_ranks#show_all'
-   get  'users/:id'    => 'users#show'
-   get  'school_info/' => 'school_info#show'
+     # get "ls_ranks/search" => 'ls_ranks#search'
+  resources :ls_ranks do
+    collection do
+     get 'search'
+     get 'show_all'
+    end
+  end
+
+   resources :users, only: :show
+
+   resources :school_info, only: :show
+   # get 'ls_ranks' => 'ls_ranks#index'
+   # get 'ls_ranks/new'  => 'ls_ranks#new'
+   # get 'ls_ranks/show' => 'ls_ranks#show'
+   # post 'ls_ranks'     => 'ls_ranks#create'
+   # get  'ls_ranks/show_all' => 'ls_ranks#show_all'
+   # get  'users/:id'    => 'users#show'
+
+
 end
 
 

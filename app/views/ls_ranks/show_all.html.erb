@@ -1,5 +1,10 @@
 <div class="ls_info">
   <% @school_infos.each do |school_info| %>
-   <li><%= school_info.name %></li>
+   <li>
+    <a href="/school_info/<%= school_info.id %>" >
+      <%= school_info.name %>
+    </a>
+   </li>
+
   <% end %>
 </div>

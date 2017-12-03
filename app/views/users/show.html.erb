@@ -1,4 +1,8 @@
  <div class="mypage" >
     <p><%= @nickname %>さんの投稿一覧</p>
 
+
+<% @comments.each do |comment| %>
+<%= comment.comments %>
+<% end %>
   </div>

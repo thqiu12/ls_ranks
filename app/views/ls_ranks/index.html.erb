@@ -2,13 +2,12 @@
 
 <div class="searchbar">
    <h1 class="bar_sentence">クチコミでより良い日本語学校を選択</h1>
-   <form>
-    <input class="text" type="text" placeholder="日本語学校の名前を入力してください" size="800" height="400">
-    <input  class="submit" type="submit" value="検索">
-   </form>
+
+  <%= form_tag(search_ls_ranks_path, method: :get) do %>
+    <input class="search__query" name="name" placeholder="日本語学校の名前で検索" type="text" value=""><input class="btn-search" value="検索" type="submit"><i class="icon-search"></i></input></input>
+  <% end %>
     <h3><a href="ls_ranks/show_all">日本語学校一覧</a></h3>
   </div>
-
 
 
   <!-- <div class="prefer">
@@ -18,45 +17,45 @@
 
    <div class="rank">日本語学校総合評価ランキング</div>
    <div class="homerank">
-   <li>
-     <a href="" class="toprankitem" title="">
-    </a>
-   </li>
-   <li>
-     <a href="" class="toprankitem" title="">
-    </a>
-   </li>
-   <li>
-     <a href="" class="toprankitem" title="">
-    </a>
-   </li>
-   <li>
-     <a href="" class="toprankitem" title="">
-    </a>
-   </li>
-   <li>
-     <a href="" class="toprankitem" title="">
-    </a>
-   </li>
+      <% @schools.each do |school| %>
+        <%= link_to "#{school.name}", school_info_path(school) %>
+        <% scores = school.scores.where(school_info_id: school.id) %>
+        <% sum = 0 %>
+
+        <% scores.each do |score| %>
+          <% sum = sum + score.total.to_i %>
+        <% end %>
+
+        <% if sum != nil %>
+          平均トータルスコア
+          <%= sum / scores.size %>
+        <% else %>
+          まだ平均トータルスコアはありません
+        <% end %>
+
+        <br>
+
+      <% end %>
    </div>
-   <%= @total_average %>
+
+
    <div class="nextranks"> <a href="ls_ranks/show">ランキングの続きを見る</a>
    </div>
 
-
+<!--
    <h3 class="otherranks"> その他ランキング<h3>
-    Total -> @total Equipment -> @equipment Location
+    Total -> @total Equipment -> @equipment Location -->
 
 
 
-
+<!--
    <h3>地図で探す</h3>
-   <%= image_tag '図1.png', :size =>'800x500', class:'map'%>
+   <%= image_tag '図1.png', :size =>'800x500', class:'map'%> -->
 
 
-  <div class="column">
+<!--   <div class="column">
    <h3>留学コラム</h3>
-  </div>
+  </div> -->
 </div>
 
 

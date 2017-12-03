@@ -16,8 +16,7 @@
      <div class="user_nav grid-6">
      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
           <a class="post" href="/ls_ranks/new">投稿する</a>
-          <a class="mypage" href="/users/:id">マイページ</a>
-         <!--  <a class="mypage" href="/ls_ranks/ -->
+          <a class="mypage" href="/users/<%= current_user.id %>">マイページ</a>
         </div>
     <% else %>
     <div class="grid-6">

@@ -3,7 +3,6 @@
     <h3>
       投稿する
     </h3>
-    <input placeholder="Nickname" type="text" name="name"><br>
     <%= select :school_info, :id, @school_infos.map{|t| [t.name, t.id]} %><br>
     <%= fields_for @score do |c| %>
       <%= c.number_field :equipment, placeholder: "Equipment", max: 10, min: 1%>

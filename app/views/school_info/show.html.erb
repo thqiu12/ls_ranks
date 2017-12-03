@@ -1,0 +1,17 @@
+<h3>基本情報</h3>
+名前
+<%= @school_info.name %> <br>
+画像
+<%= @school_info.image if @school_info.image %>
+<br>
+
+都道府県
+<%= @school_info.province %>
+<br>
+
+コメント
+<% @comments.each do |comment| %>
+<br>
+  <%= comment.comments %>
+<% end %>
+

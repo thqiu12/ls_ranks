@@ -1,10 +1,22 @@
-<div class="searchbar">
-   <h3>名前で検索</h3>
- <form>
-    <input type="text" placeholder="日本語学校の名前を入力してください"><br>
-    <input type="submit" value="検索">
 
- </form>
-</div>
+   <div class="homerank">
+      <% @schools.each do |school| %>
+        <%= link_to "#{school.name}", school_info_path(school) %>
+        <% scores = school.scores.where(school_info_id: school.id) %>
+        <% sum = 0 %>
 
+        <% scores.each do |score| %>
+          <% sum = sum + score.total.to_i %>
+        <% end %>
 
+        <% if sum != nil %>
+          平均トータルスコア
+          <%= sum / scores.size %>
+        <% else %>
+          まだ平均トータルスコアはありません
+        <% end %>
+
+        <br>
+
+      <% end %>
+   </div>

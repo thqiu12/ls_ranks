@@ -12,9 +12,14 @@ class LsRanksController < ApplicationController
     end
     @total_average = total.to_i / (@school.scores.count ? 1 : @school.scores.count.to_i)
 
+    @schools = SchoolInfo.limit(5)
+
+    @scores = Score.order(total: "DESC")
+
   end
 
   def show
+    @schools = SchoolInfo.limit(100)
   end
 
   def new
@@ -29,7 +34,11 @@ class LsRanksController < ApplicationController
   end
 
   def search
-    @school_info = SchoolInfo.where(activated: true).paginate(page: params[:page]).search(params[:search])
+    # @school_info = SchoolInfo.where(activated: true).paginate(page: params[:page]).search(params[:search])
+
+
+    @schools = SchoolInfo.where('name LIKE(?)', "#{params[:name]}%").limit(20)
+
   end
 
   def show_all
@@ -39,7 +48,7 @@ class LsRanksController < ApplicationController
 
   private
   def comment_params
-    params.permit(:name, :image, :comments, :ls_name)
+    params.permit(:name, :image, :comments, :ls_name).merge(school_id: params[:school_info][:id], user_id: current_user.id)
     # params.require(:school_info).permit(school_id: params[:school_info][:id])
     # params.require(:user).permit(user_id: params[:user][:id])
   end

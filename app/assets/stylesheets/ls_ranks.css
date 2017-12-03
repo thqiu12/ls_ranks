@@ -76,6 +76,7 @@ h1,h2,h3,h4,h5,h6,p {
   color:white;
   text-align: center;
   font-size: 30px;
+  padding:0 0 50px 0;
 }
 
 .searchbar {
@@ -98,20 +99,21 @@ min-width: 1000px;
   box-sizing: border-box
 }
 
-.submit input{
-/*  width:40px;
-  height: 100px;*/
-  padding: 10px;
-}
-.searchbar input{
-  margin: 50px 0 0 0;
-    width:40px;
-  height: 100px;
-}
-
 .searchbar a {
   color:white;
   text-decoration: none;
+}
+
+.search__query {
+  width:300px;
+  height:30px;
+  box-sizing: border-box;
+  margin:10px 0 0 0;
+}
+
+.btn-search {
+ height: 30px;
+ width:40px;
 }
 
 .toprankitem {
