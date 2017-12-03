@@ -28,7 +28,7 @@
 
         <% if sum != nil %>
           平均トータルスコア
-          <%= sum / scores.size %>
+          <%= sum / scores.size if scores.size != 0 %>
         <% else %>
           まだ平均トータルスコアはありません
         <% end %>
